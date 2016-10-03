@@ -1,1 +1,9 @@
 *.suo
+GameStore.WebUI/obj/Debug/
+GameStore.UnitTests/bin/
+GameStore.WebUI/bin/
+GameStore.UnitTests/obj/Debug/GameStore.UnitTests.csproj.FileListAbsolute.txt
+GameStore.Domain/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+GameStore.Domain/obj/
+GameStore.Domain/bin/
+GameStore.UnitTests/obj/
