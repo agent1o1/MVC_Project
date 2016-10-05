@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStore.Domain", "Z:\Code\GameStore\GameStore.Domain\GameStore.Domain.csproj", "{8DD56B85-E952-46CE-A1D0-FB25670ACB2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStore.Domain", "GameStore.Domain\GameStore.Domain.csproj", "{8DD56B85-E952-46CE-A1D0-FB25670ACB2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStore.WebUI", "Z:\Code\GameStore\GameStore.WebUI\GameStore.WebUI.csproj", "{96E6EA5D-F1EF-4EEF-AF91-4D587DD1FF97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStore.WebUI", "GameStore.WebUI\GameStore.WebUI.csproj", "{96E6EA5D-F1EF-4EEF-AF91-4D587DD1FF97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStore.UnitTests", "Z:\Code\GameStore\GameStore.UnitTests\GameStore.UnitTests.csproj", "{4392C148-9155-472B-B8FC-752747B0468F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStore.UnitTests", "GameStore.UnitTests\GameStore.UnitTests.csproj", "{4392C148-9155-472B-B8FC-752747B0468F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
