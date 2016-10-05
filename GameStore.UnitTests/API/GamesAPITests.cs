@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using GameStore.WebUI.Controllers.WebAPI;
 using System.Web.Helpers;
+using System.Collections.Generic;
 
 namespace GameStore.UnitTests.API
 {
@@ -9,13 +10,19 @@ namespace GameStore.UnitTests.API
     public class GamesAPITests
     {
         [TestMethod]
-        public void Empty_Get_Should_Return_A_Json_With_Products_Names()
+        public void Empty_Get_Request_Should_Return_A_Not_Empty_Collection()
         {
             GamesAPIController controller = new GamesAPIController();
 
-            Type json = typeof(Json);
+            bool isEmpty = true;
 
-            Assert.IsInstanceOfType(controller.Get(), json);
+            foreach (var item in controller.Get())
+            {
+                isEmpty = false;
+                break;
+            }
+
+            Assert.IsFalse(isEmpty);
         }
     }
 }

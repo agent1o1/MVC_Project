@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace GameStore.Domain.Entitys
 {
-    public static class Data
+    public static class Data //Those static Lists using like a dummy results of Entity stored procedures
     {
-        public static List<DataModel> DataSet = new List<DataModel>()
+        public static List<GamesDataModel> GamesList = new List<GamesDataModel>()
         {
-            new DataModel(){Name = "Patric", Age = 34 },
-            new DataModel(){Name = "Nicol", Age = 28 },
-            new DataModel(){Name = "Abubakar", Age = 31 },
-
+            new GamesDataModel(){Name = "FarCry 2", Price = 1999 },
+            new GamesDataModel(){Name = "Skyrim", Price = 999 },
+            new GamesDataModel(){Name = "Counter-Strike", Price = 1299 }
         }; 
     }
 
-    public class DataModel
+    public class GamesDataModel
     {
         private string name;
 
@@ -27,12 +26,12 @@ namespace GameStore.Domain.Entitys
             set { name = value; }
         }
 
-        private int age;
+        private int price;
 
-        public int Age
+        public int Price
         {
-            get { return age; }
-            set { age = value; }
+            get { return price; }
+            set { price = value; }
         }
         
     }

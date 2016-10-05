@@ -5,34 +5,51 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Helpers;
 using System.Web.Http;
+using GameStore.Domain.Entitys;
 
 namespace GameStore.WebUI.Controllers.WebAPI
 {
     public class GamesAPIController : ApiController
     {
-        // GET api/<controller>
-        public IEnumerable<string> Get()
+        public IEnumerable<GamesDataModel> Get()
         {
-            return new string[] { "val1", "val2" };
+            return Data.GamesList;
         }
 
-        // GET api/<controller>/5
-        public string Get(int id)
+        public GamesDataModel Get(int id)
         {
-            return "value";
+            try
+            {
+                return Data.GamesList[id];
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        // POST api/<controller>
-        public void Post([FromBody]string value)
+        //[Autorize(Roles = "Administrator"]
+        public void Post([FromBody]GamesDataModel value)
         {
+            Data.GamesList.Add(value);
         }
 
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
+        //[Autorize(Roles = "Administrator"]
+        public int Put(int id, [FromBody]GamesDataModel value)
         {
+            try
+            {
+                Data.GamesList[id] = value;
+                return 200;
+            }
+
+            catch
+            {
+                return 400;
+            }
         }
 
-        // DELETE api/<controller>/5
+        //[Autorize(Roles = "Administrator"]
         public void Delete(int id)
         {
         }
